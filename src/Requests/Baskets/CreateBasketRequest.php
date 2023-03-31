@@ -5,10 +5,11 @@ namespace Shimmer\LaravelTebexCheckout\Requests\Baskets;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
+use Saloon\Traits\Body\HasJsonBody;
 
 class CreateBasketRequest extends Request implements HasBody
 {
-    use \Saloon\Traits\Body\HasBody;
+    use HasJsonBody;
 
     public function __construct(
         protected string $returnUrl,
