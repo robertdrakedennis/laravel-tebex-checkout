@@ -36,3 +36,34 @@ it('successfully creates a checkout request', function () {
     expect($response->successful())->toBeTrue();
     expect($response->json())->toHaveKey('price', 12.34);
 });
+
+
+it('successfully creates a checkout request with resource api', function () {
+    $mockClient = new MockClient([
+        CreateCheckoutRequest::class => MockResponse::fixture('create.checkout.request'),
+    ]);
+
+    $checkout = new TebexCheckout('foo', 'bar');
+    $checkout->withMockClient($mockClient);
+
+    $response = $checkout->checkout()->create(
+        basket: [
+            'return_url' => 'http://foo.com',
+            'complete_url' => 'http://bar.com',
+            'custom' => [
+                'baz' => 'buzz',
+            ],
+        ],
+        items: [
+            [
+                'package' => [
+                    'name' => 'foobar',
+                    'price' => 12.34,
+                ],
+            ],
+        ]
+    );
+
+    expect($response->successful())->toBeTrue();
+    expect($response->json())->toHaveKey('price', 12.34);
+});
