@@ -18,5 +18,6 @@ class PackageData extends Data
         public int|Optional $qty,
         public PackageType $type,
         public array|Optional $revenue_share,
-    ){}
+    ) {
+    }
 }

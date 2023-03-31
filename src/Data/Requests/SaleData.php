@@ -11,5 +11,6 @@ class SaleData extends Data
         public string $name,
         public SaleDiscountType $discount_type,
         public float $amount,
-    ){}
+    ) {
+    }
 }

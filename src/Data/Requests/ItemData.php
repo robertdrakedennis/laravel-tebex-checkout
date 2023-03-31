@@ -12,5 +12,6 @@ class ItemData extends Data
         public int|Optional $qty,
         public array|Optional $revenue_share,
         public SaleData|Optional $sale,
-    ){}
+    ) {
+    }
 }

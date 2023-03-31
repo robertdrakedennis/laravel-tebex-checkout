@@ -14,7 +14,8 @@ class BasketData extends Data
         public string|Optional $first_name,
         public string|Optional $last_name,
         public string|Optional $email
-    ){}
+    ) {
+    }
 
     public function toArrayWithFilledProps(): array
     {
