@@ -7,7 +7,7 @@
         "laravel-tebex-checkout"
     ],
     "homepage": "https://github.com/useshimmer/laravel-tebex-checkout",
-    "license": "MIT",
+    "license": "GPLv3",
     "authors": [
         {
             "name": "Robert Dennis",
