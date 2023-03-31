@@ -16,23 +16,20 @@ class CreateSaleRequest extends Request implements HasBody
         protected string $name,
         protected string $discountType,
         protected float $amount
-    ){}
+    ) {
+    }
 
     /**
      * Define the HTTP method
-     *
-     * @var Method
      */
     protected Method $method = Method::POST;
 
     /**
      * Define the endpoint for the request
-     *
-     * @return string
      */
     public function resolveEndpoint(): string
     {
-        return '/baskets/' . $this->ident . '/sales';
+        return '/baskets/'.$this->ident.'/sales';
     }
 
     protected function defaultBody(): array
@@ -40,7 +37,7 @@ class CreateSaleRequest extends Request implements HasBody
         return [
             'name' => $this->name,
             'discount_type' => $this->discountType,
-            'amount' => $this->amount
+            'amount' => $this->amount,
         ];
     }
 }

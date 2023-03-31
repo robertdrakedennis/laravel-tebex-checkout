@@ -14,19 +14,16 @@ class CreateBasketRequest extends Request implements HasBody
     public function __construct(
         protected string $returnUrl,
         protected string $completeUrl
-    ){}
+    ) {
+    }
 
     /**
      * Define the HTTP method
-     *
-     * @var Method
      */
     protected Method $method = Method::POST;
 
     /**
      * Define the endpoint for the request
-     *
-     * @return string
      */
     public function resolveEndpoint(): string
     {
@@ -37,7 +34,7 @@ class CreateBasketRequest extends Request implements HasBody
     {
         return [
             'return_url' => $this->returnUrl,
-            'complete_url' => $this->completeUrl
+            'complete_url' => $this->completeUrl,
         ];
     }
 }

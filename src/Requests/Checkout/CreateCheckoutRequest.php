@@ -14,19 +14,16 @@ class CreateCheckoutRequest extends Request implements HasBody
     public function __construct(
         protected array $basket,
         protected array $items,
-    ){}
+    ) {
+    }
 
     /**
      * Define the HTTP method
-     *
-     * @var Method
      */
     protected Method $method = Method::POST;
 
     /**
      * Define the endpoint for the request
-     *
-     * @return string
      */
     public function resolveEndpoint(): string
     {
@@ -37,7 +34,7 @@ class CreateCheckoutRequest extends Request implements HasBody
     {
         return [
             'basket' => $this->basket,
-            'items' => $this->items
+            'items' => $this->items,
         ];
     }
 }

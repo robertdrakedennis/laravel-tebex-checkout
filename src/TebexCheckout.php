@@ -14,12 +14,11 @@ class TebexCheckout extends Connector
     public function __construct(
         public string $username,
         public string $password
-    ){}
+    ) {
+    }
 
     /**
      * The Base URL of the API
-     *
-     * @return string
      */
     public function resolveBaseUrl(): string
     {

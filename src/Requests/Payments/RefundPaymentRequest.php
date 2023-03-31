@@ -9,22 +9,19 @@ class RefundPaymentRequest extends Request
 {
     public function __construct(
         protected string $txnID
-    ){}
+    ) {
+    }
 
     /**
      * Define the HTTP method
-     *
-     * @var Method
      */
     protected Method $method = Method::POST;
 
     /**
      * Define the endpoint for the request
-     *
-     * @return string
      */
     public function resolveEndpoint(): string
     {
-        return '/payments/' . $this->txnID . '/refund?type=txn_id';
+        return '/payments/'.$this->txnID.'/refund?type=txn_id';
     }
 }
