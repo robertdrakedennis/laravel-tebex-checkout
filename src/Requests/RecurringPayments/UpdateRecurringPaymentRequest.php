@@ -23,7 +23,9 @@ class UpdateRecurringPaymentRequest extends Request implements HasBody
     protected Method $method = Method::PUT;
 
     /**
-     * Define the endpoint for the request
+     * Update a subscription with a new product / amount to pay - replacing the existing product.
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#update-a-subscription-with-a-new-product-amount-to-pay-replacing-the-existing-product
      */
     public function resolveEndpoint(): string
     {

@@ -23,7 +23,9 @@ class CreateCheckoutRequest extends Request implements HasBody
     protected Method $method = Method::POST;
 
     /**
-     * Define the endpoint for the request
+     * Create a checkout request.
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#create-a-checkout-request
      */
     public function resolveEndpoint(): string
     {

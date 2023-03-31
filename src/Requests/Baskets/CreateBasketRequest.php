@@ -23,7 +23,9 @@ class CreateBasketRequest extends Request implements HasBody
     protected Method $method = Method::POST;
 
     /**
-     * Define the endpoint for the request
+     * Create a basket that can be used to pay for items.
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#create-a-basket-that-can-be-used-to-pay-for-items
      */
     public function resolveEndpoint(): string
     {

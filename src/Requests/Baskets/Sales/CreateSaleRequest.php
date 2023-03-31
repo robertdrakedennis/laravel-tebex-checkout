@@ -25,7 +25,9 @@ class CreateSaleRequest extends Request implements HasBody
     protected Method $method = Method::POST;
 
     /**
-     * Define the endpoint for the request
+     * Add a sale to the basket
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#add-a-sale-to-the-basket
      */
     public function resolveEndpoint(): string
     {

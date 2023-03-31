@@ -18,7 +18,9 @@ class GetBasketRequest extends Request
     protected Method $method = Method::GET;
 
     /**
-     * Define the endpoint for the request
+     * Fetch a basket by its identifier.
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#fetch-a-basket-by-its-identifier
      */
     public function resolveEndpoint(): string
     {

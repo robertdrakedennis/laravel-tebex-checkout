@@ -18,7 +18,9 @@ class GetRecurringPaymentRequest extends Request
     protected Method $method = Method::GET;
 
     /**
-     * Define the endpoint for the request
+     * Fetch a recurring payment (subscription) by its reference.
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#fetch-a-recurring-payment-subscription-by-its-reference
      */
     public function resolveEndpoint(): string
     {

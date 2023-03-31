@@ -13,7 +13,7 @@ class AddPackageRequest extends Request implements HasBody
 
     public function __construct(
         protected string $ident,
-        protected object $package,
+        protected array $package,
         protected string $type,
     ) {
     }
@@ -24,7 +24,9 @@ class AddPackageRequest extends Request implements HasBody
     protected Method $method = Method::POST;
 
     /**
-     * Define the endpoint for the request
+     * Add a package to a basket.
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#add-package-to-a-basket
      */
     public function resolveEndpoint(): string
     {

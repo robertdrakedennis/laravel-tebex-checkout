@@ -18,7 +18,9 @@ class GetPaymentRequest extends Request
     protected Method $method = Method::GET;
 
     /**
-     * Define the endpoint for the request
+     * Fetch a payment by its transaction ID
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#fetch-a-payment-by-its-transaction-id
      */
     public function resolveEndpoint(): string
     {

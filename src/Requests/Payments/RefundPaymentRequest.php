@@ -18,7 +18,9 @@ class RefundPaymentRequest extends Request
     protected Method $method = Method::POST;
 
     /**
-     * Define the endpoint for the request
+     * Refund a payment by its transaction ID
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#refund-a-payment-by-its-transaction-id
      */
     public function resolveEndpoint(): string
     {

@@ -19,7 +19,9 @@ class DeletePackageRequest extends Request
     protected Method $method = Method::DELETE;
 
     /**
-     * Define the endpoint for the request
+     * Remove a row from the basket
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#remove-a-row-from-the-basket
      */
     public function resolveEndpoint(): string
     {

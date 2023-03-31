@@ -18,7 +18,9 @@ class CancelRecurringPaymentRequest extends Request
     protected Method $method = Method::DELETE;
 
     /**
-     * Define the endpoint for the request
+     * Cancel a recurring payment.
+     *
+     * @see https://docs.tebex.io/tebex-checkout-apis/eICB5LG5njxwP9wLlQv4/apis#cancel-a-recurring-payment
      */
     public function resolveEndpoint(): string
     {
