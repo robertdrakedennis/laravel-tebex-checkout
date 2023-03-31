@@ -14,29 +14,26 @@ class UpdateRecurringPaymentRequest extends Request implements HasBody
     public function __construct(
         protected string $reference,
         protected array $items,
-    ){}
+    ) {
+    }
 
     /**
      * Define the HTTP method
-     *
-     * @var Method
      */
     protected Method $method = Method::PUT;
 
     /**
      * Define the endpoint for the request
-     *
-     * @return string
      */
     public function resolveEndpoint(): string
     {
-        return '/recurring-payments/' . $this->reference;
+        return '/recurring-payments/'.$this->reference;
     }
 
     protected function defaultBody(): array
     {
         return [
-            'items' => $this->items
+            'items' => $this->items,
         ];
     }
 }

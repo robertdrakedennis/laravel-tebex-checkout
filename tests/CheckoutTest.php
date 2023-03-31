@@ -7,7 +7,7 @@ use Shimmer\LaravelTebexCheckout\TebexCheckout;
 
 it('successfully creates a checkout request', function () {
     $mockClient = new MockClient([
-        CreateCheckoutRequest::class => MockResponse::fixture('create.checkout.request')
+        CreateCheckoutRequest::class => MockResponse::fixture('create.checkout.request'),
     ]);
 
     $checkout = new TebexCheckout('foo', 'bar');
@@ -18,16 +18,16 @@ it('successfully creates a checkout request', function () {
             'return_url' => 'http://foo.com',
             'complete_url' => 'http://bar.com',
             'custom' => [
-                'baz' => 'buzz'
-            ]
+                'baz' => 'buzz',
+            ],
         ],
         items: [
             [
                 'package' => [
                     'name' => 'foobar',
-                    'price' => 12.34
-                ]
-            ]
+                    'price' => 12.34,
+                ],
+            ],
         ]
     );
 
