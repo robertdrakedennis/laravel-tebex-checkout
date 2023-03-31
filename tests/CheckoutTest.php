@@ -37,7 +37,6 @@ it('successfully creates a checkout request', function () {
     expect($response->json())->toHaveKey('price', 12.34);
 });
 
-
 it('successfully creates a checkout request with resource api', function () {
     $mockClient = new MockClient([
         CreateCheckoutRequest::class => MockResponse::fixture('create.checkout.request'),
